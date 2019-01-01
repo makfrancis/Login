@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,7 +36,7 @@ public class UserController {
 	}
 	
 	@GetMapping("/{username}")
-	public User geteUsername(@PathVariable("username") final String userName){
+	public User getUsername(@PathVariable("username") final String userName){
 		
 		User findName = userRepository.findByUserName(userName);
 		
@@ -60,6 +61,7 @@ public class UserController {
 		
 	}
 	
+	
 	@GetMapping("/all")
 	public List<User> getAll(){
 		
@@ -68,6 +70,20 @@ public class UserController {
 		return userRepository.findAll();
 		
 	}
+	
+	@PutMapping("/{username}/{password}")  
+	public void updateUserByName(@PathVariable("username") final String userName,@PathVariable("password") final String password){
+		
+		if(userRepository.findByUserName(userName).getUserName().length() > 0) {
+			User user = userRepository.findByUserName(userName);
+			user.setUserName(userName);
+			user.setPassword(password);
+			user.setUserType(user.getUserType());
+			userRepository.save(user);
+		}
+		
+	}
+
 	
 	
 	

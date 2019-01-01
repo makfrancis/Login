@@ -3,56 +3,26 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-	rel="stylesheet" id="bootstrap-css">
-<script
-	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script
-	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Homepage</title>
+<title>Create New User</title>
 
 
-<style>
-.customers {
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	border-collapse: collapse;
-	width: 100%;
-}
-
-.customers td, .customers th {
-	border: 1px solid #ddd;
-	padding: 8px;
-}
-
-.customers tr:nth-child(even) {
-	background-color: #f2f2f2;
-}
-
-.customers tr:hover {
-	background-color: #ddd;
-}
-
-.customers th {
-	padding-top: 12px;
-	padding-bottom: 12px;
-	text-align: left;
-	background-color: #4CAF50;
-	color: white;
-}
-</style>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="../../css/regform.css" rel="stylesheet" id="bootstrap-css">
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
 
 
 
 </head>
 <body>
 
-	<form action="/insertMember" method="POST">
+<!-- 	<form action="/insertMember" method="POST">
 		<div class="form-group">
 			<input name="userName" class="form-control" id="userName"
 				placeholder="User Name">
@@ -68,30 +38,29 @@
 		<button type="submit" class="btn btn-primary">Add</button>
 
 	</form>
+	 -->
+	 	<br>
+		<h1>Create New User</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="/insertMember" method="POST">
+					<input class="text" type="text" name="userName" id="" placeholder="Username" required="">
+					<br>
+					<input class="text" type="password" name="password" placeholder="Password" required="">
+					<br>
+					<input class="text" type="text" name="userType" id="userType" placeholder="User Type" required="">
+					<br>
+					<div class="wthree-text">
+						<label class="anim">
+							<input type="checkbox" class="checkbox" required="">
+							<span>I Agree To The Terms & Conditions</span>
+						</label>
+						<div class="clear"> </div>
+					</div>
+					<input type="submit" value="SIGNUP">
+				</form>
+			</div>
+		</div>
 
-	<br>
-	<br>
-	<br>
-	<br>
-
-	<!-- Footer -->
-	<style>
-#footer {
-	background-color: white;
-	color: black;
-	clear: both;
-	text-align: center;
-	padding: 5px;
-	border: 1px solid #999999
-}
-</style>
-	<div id="footer">
-
-		<P align=center style="font-family: Calibri, Garamond, Serif;">
-			<font size="1.5"> TCF Java - Client </font>
-		</P>
-	</div>
-	<!-- Footer END -->
 </body>
-<!--<p>${response}</p>  -->
 </html>

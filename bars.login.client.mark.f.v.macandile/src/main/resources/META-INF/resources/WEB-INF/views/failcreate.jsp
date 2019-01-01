@@ -1,2 +1,2 @@
-<h1>Wrong Username or Password</h1>
+<h1>Username already exist</h1>
 <a href = "/insertPage">Go back</a>
